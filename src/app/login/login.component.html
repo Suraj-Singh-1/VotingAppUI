@@ -1,0 +1,17 @@
+<div class="container">
+    <form [formGroup]="loginForm" class="login" *ngIf="isLogin">
+        <input type="text" placeholder="USERNAME" formControlName="userName"/>
+        <input type="text" placeholder="PASSWORD" formControlName="password"/>
+    </form>
+    <form [formGroup]="registerForm" class="register" *ngIf="!isLogin">
+        <input type="text" placeholder="USERNAME" formControlName="userName"/>
+        <input type="text" placeholder="PASSWORD" formControlName="password"/>
+        <input type="text" placeholder="EMAIL ID" formControlName="emailId"/>
+        <input type="text" placeholder="PHONE NO." formControlName="phoneNo"/>
+    </form>
+    <div class="buttonGroup">
+        <input type="button" value="LOGIN" onclick="!isLogin"/>
+        <input type="button" value="REGISTER" onclick="!isLogin"/>
+        <label>{{isLogin}}</label>
+    </div>
+</div>
